@@ -53,12 +53,12 @@ a{text-decoration: none;}
   margin: 0;
 }
 .header-content {
-  height: 80px;
   background: var(--primary-background-color);
   border-bottom: 1px solid #ececec;
 }
 .header-nav {
   display: flex;
+  height: 80px;
   align-items: center;
 }
 /*---------------------------logo --------------------------------------*/
@@ -78,6 +78,8 @@ a{text-decoration: none;}
   display: flex;
   margin-left: 93px;
 }
+.menu-nav{
+  padding: 32px 0;}
 
 .header-items .item:not(:last-child),
 .header-contacts .item:not(:last-child) {
@@ -94,9 +96,25 @@ a{text-decoration: none;}
 .header-item:hover,
 .header-item:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-items .current {
   color: var(--accent-color);
+}
+.current{
+  position: relative;
+
+}
+.current::after{
+  position: absolute;
+  content:"";
+  display: flex;
+
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 2px; 
+  background-color:var(--accent-team-background-color);
 }
 
 /*--------------------------- header contacts --------------------------*/
@@ -130,11 +148,13 @@ a{text-decoration: none;}
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .header-contact:hover .item-icon,
 .header-contact:focus .item-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- hero content -----------------------------*/
@@ -191,6 +211,7 @@ a{text-decoration: none;}
 .button.primary:hover {
   color: var(--title-text-color);
   background: var(--team-background-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- peculiarities ----------------------------*/
@@ -300,7 +321,6 @@ a{text-decoration: none;}
   height: 44px;
   background: transparent;
   border-radius: 50%;
-   
 }
 .team-link{
 background: rgba(255, 255, 255, 0.1);
@@ -318,12 +338,12 @@ border-radius: 50%;
 .team-link:hover .team-icon,
 .team-link:focus .team-icon {
   fill: var(--accent-team-icon-color);
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .team-link:hover,
 .team-link:focus {
   background-color: var(--accent-team-background-color);
-  
-}
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)}
 
 /* --------------------------clients------------------------------------ */
 .clients {
@@ -350,10 +370,12 @@ border-radius: 50%;
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-team-background-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- footer -----------------------------------*/
@@ -389,6 +411,7 @@ border-radius: 50%;
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 /*--------------------------- Social -----------------------------------*/
 .social {
@@ -430,14 +453,16 @@ border-radius: 50%;
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
-.social-link:hover .social-icon,
+/* .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--accent-team-icon-color);
-}
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+} */
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-team-background-color);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- portfolio --------------------------------*/
@@ -466,6 +491,7 @@ border-radius: 50%;
   color: var(--hero-headline-color);
   padding: 6px 25px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- projects ---------------------------------*/
@@ -505,4 +531,5 @@ border-radius: 50%;
 .project:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
