@@ -67,7 +67,9 @@
       <section class="hero-content">
         <div class="container">
           <h1 class="hero-headline">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button primary">Замовити послугу</button>
+          <button type="button" class="button primary" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Peculiarities-->
@@ -130,7 +132,10 @@
         <div class="container">
           <h2 class="section-headline">Чим ми займаємося</h2>
           <ul class="section-items list">
-            <li class="section-item">
+            <li class="section-item work-thumb">
+              <div class="action-work">
+                <h3 class="action-title">Десктопні додатки</h3>
+              </div>
               <img
                 src="images/one.jpg"
                 alt="робочий стіл програміста"
@@ -138,7 +143,10 @@
                 class="image"
               />
             </li>
-            <li class="section-item">
+            <li class="section-item work-thumb">
+              <div class="action-work">
+                <h3 class="action-title">Мобільні додатки</h3>
+              </div>
               <img
                 src="images/two.jpg"
                 alt="Macbook с смартфоном"
@@ -146,7 +154,10 @@
                 class="image"
               />
             </li>
-            <li class="section-item">
+            <li class="section-item work-thumb">
+              <div class="action-work">
+                <h3 class="action-title">Дизайнерські рішення</h3>
+              </div>
               <img
                 src="images/three.jpg"
                 alt="планшет з палітрою кольору"
@@ -375,12 +386,12 @@
                 м. Київ,пр-т Лесі Українки, 26
               </li>
               <li class="address">
-                <a href="mailto:info@devstudio.com" class="footer-contact"
+                <a href="mailto:info@devstudio.com" class="footer-contact more"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="address">
-                <a href="tel:+380961111111" class="footer-contact"
+                <a href="tel:+380961111111" class="footer-contact more"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -418,5 +429,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="hidden">
+        <div class="modal">
+          <button class="button-close-modal" data-modal-close>
+            <svg class="close-black-icon">
+              <use href="./images/icons.svg#close-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

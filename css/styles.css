@@ -32,7 +32,9 @@ body {
   background: var(--primary-background-color);
   color: var(--primary-text-color);
 }
-a{text-decoration: none;}
+a {
+  text-decoration: none;
+}
 
 /*--------------------------- section container ------------------------*/
 .section {
@@ -78,8 +80,9 @@ a{text-decoration: none;}
   display: flex;
   margin-left: 93px;
 }
-.menu-nav{
-  padding: 32px 0;}
+.menu-nav {
+  padding: 32px 0;
+}
 
 .header-items .item:not(:last-child),
 .header-contacts .item:not(:last-child) {
@@ -92,35 +95,39 @@ a{text-decoration: none;}
   letter-spacing: 0.02em;
   padding: 32px 0;
   color: var(--title-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-item:hover,
 .header-item:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-items .current {
   color: var(--accent-color);
 }
-.current{
+.current {
   position: relative;
-
 }
-.current::after{
+.current::after {
   position: absolute;
-  content:"";
+  content: "";
   display: flex;
 
   width: 100%;
   height: 4px;
   bottom: 0;
-  border-radius: 2px; 
-  background-color:var(--accent-team-background-color);
+  border-radius: 2px;
+  background-color: var(--accent-team-background-color);
 }
 
 /*--------------------------- header contacts --------------------------*/
 .item-icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-icon.mail {
   width: 16px;
@@ -143,18 +150,19 @@ a{text-decoration: none;}
   letter-spacing: 0.02em;
   padding: 32px 0;
   color: var(--primary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .header-contact:hover .item-icon,
 .header-contact:focus .item-icon {
   fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- hero content -----------------------------*/
@@ -206,12 +214,14 @@ a{text-decoration: none;}
 .button.primary {
   background: var(--accent-color);
   color: var(--hero-headline-color);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.primary:focus,
 .button.primary:hover {
   color: var(--title-text-color);
   background: var(--team-background-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- peculiarities ----------------------------*/
@@ -263,6 +273,29 @@ a{text-decoration: none;}
   margin-bottom: 50px;
   color: var(--title-text-color);
 }
+.work-thumb {
+  display: flex;
+  position: relative;
+}
+.action-work {
+  display: flex;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+.action-title {
+  font-size: 14px;
+  line-height: 1.14;
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--hero-headline-color);
+}
 .image {
   display: block;
 }
@@ -311,7 +344,6 @@ a{text-decoration: none;}
 
 .network-items {
   display: flex;
-  
 }
 .team-link {
   display: flex;
@@ -322,15 +354,21 @@ a{text-decoration: none;}
   background: transparent;
   border-radius: 50%;
 }
-.team-link{
-background: rgba(255, 255, 255, 0.1);
-border-radius: 50%;
+.team-link {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .network-item:not(:last-child) {
   margin-right: 10px;
@@ -338,12 +376,11 @@ border-radius: 50%;
 .team-link:hover .team-icon,
 .team-link:focus .team-icon {
   fill: var(--accent-team-icon-color);
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .team-link:hover,
 .team-link:focus {
   background-color: var(--accent-team-background-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)}
+}
 
 /* --------------------------clients------------------------------------ */
 .clients {
@@ -357,12 +394,18 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
   width: 106px;
   height: 60px;
   fill: var(--icon-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-item:not(:last-child) {
   margin-right: 30px;
@@ -370,12 +413,10 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
   fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-team-background-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- footer -----------------------------------*/
@@ -405,13 +446,17 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
   line-height: 1.7;
   color: var(--footer-contact);
 }
+.more {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .address:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 /*--------------------------- Social -----------------------------------*/
 .social {
@@ -443,6 +488,9 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -456,13 +504,12 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 /* .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--accent-team-icon-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+
 } */
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-team-background-color);
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- portfolio --------------------------------*/
@@ -484,14 +531,15 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 .button.secondary {
   background: var(--team-background-color);
   color: var(--title-text-color);
+  transition-property: background-color, color, padding;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.secondary:hover,
 .button.secondary:focus {
   background: var(--accent-color);
   color: var(--hero-headline-color);
   padding: 6px 25px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------------------- projects ---------------------------------*/
@@ -506,6 +554,9 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
   /* width: 370px; */
   width: calc((100% - 60px) / 3);
   background: var(--primary-background-color);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .project-link{} */
 
@@ -527,9 +578,110 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
   color: var(--primary-text-color);
   margin: 0;
 }
+.box-overlay {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.project:hover .overlay {
+  transform: translatey(0);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin: 0;
+
+  color: var(--hero-headline-color);
+}
 
 .project:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+/*------------------------- backdrop ----------------------------------*/
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close-modal {
+  display: flex;
+  position: absolute;
+
+  right: 8px;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  background: var(--team-item-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-black-icon {
+  width: 11px;
+  height: 11px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-close-modal:hover .close-black-icon,
+.button-close-modal:focus .close-black-icon {
+  fill: var(--accent-team-icon-color);
+}
+.button-close-modal:hover,
+.button-close-modal:focus {
+  background-color: var(--accent-team-background-color);
 }
