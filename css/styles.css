@@ -129,14 +129,7 @@ a {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item-icon.mail {
-  width: 16px;
-  height: 12px;
-}
-.item-icon.tel {
-  width: 10px;
-  height: 16px;
-}
+
 .header-contacts {
   display: flex;
   margin-left: auto;
