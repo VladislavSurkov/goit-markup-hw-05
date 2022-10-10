@@ -89,6 +89,7 @@ a {
   margin-right: 50px;
 }
 .header-item {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -106,10 +107,8 @@ a {
 .header-items .current {
   color: var(--accent-color);
 }
-.current {
-  position: relative;
-}
-.current::after {
+
+.header-item::after {
   position: absolute;
   content: "";
   display: flex;
@@ -118,8 +117,11 @@ a {
   height: 4px;
   bottom: 0;
   border-radius: 2px;
-  background-color: var(--accent-team-background-color);
+  background-color: transparent;
 }
+.header-item.current:after,
+.header-item:hover:after,
+.header-item:focus:after{background-color: var(--accent-team-background-color);}
 
 /*--------------------------- header contacts --------------------------*/
 .item-icon {
