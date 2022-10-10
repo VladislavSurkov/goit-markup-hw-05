@@ -656,8 +656,8 @@ transform: translate(-50%, -50%) scale(0);
 
   right: 8px;
   top: 8px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 
   padding: 0;
   align-items: center;
@@ -668,9 +668,7 @@ transform: translate(-50%, -50%) scale(0);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .close-black-icon {
   width: 11px;
@@ -681,9 +679,6 @@ transform: translate(-50%, -50%) scale(0);
 }
 .button-close-modal:hover .close-black-icon,
 .button-close-modal:focus .close-black-icon {
-  fill: var(--accent-team-icon-color);
+  fill: var(--accent-color);
 }
-.button-close-modal:hover,
-.button-close-modal:focus {
-  background-color: var(--accent-team-background-color);
-}
+
